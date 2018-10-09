@@ -23,4 +23,8 @@ export class homeComponent implements OnInit {
 
     console.log(players[1]);
   }
+  startGame() {
+    this.hideStart = true;
+    this.hideGame = false; 
+  }
 }

@@ -1,12 +1,12 @@
 <header>
   <h1>
-     {{ title }}!
+     {{ title }}
   </h1>
      {{subTitle}}
   
 </header>
 
-<app-start></app-start>
-<app-game [hidden]="hideGame"></app-game>
-<app-end [hidden]="hideEnd"></app-end>
+<app-start [hidden]="hideStart" [attr.aria-hidden]="hideStart" (start)="startGame()"></app-start>
+<app-game [hidden]="hideGame" [attr.aria-hidden]="hideGame"></app-game>
+<app-end [hidden]="hideEnd" [attr.aria-hidden]="hideEnd"></app-end>
 

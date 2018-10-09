@@ -3,6 +3,8 @@ label {
     font-size: 2rem;
     margin-right:1rem;
     float: left;
+    warning & {color: darkorange;}
+    error & {color: red;}
 }
 
 input {
@@ -24,6 +26,8 @@ input {
     &[type=checkbox] {
         display:none;
     }
+    .warning & { border-color: darkorange;}
+    .error & { border-color: red;}
 }
 
 button {

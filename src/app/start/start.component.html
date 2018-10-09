@@ -1,12 +1,12 @@
 <form>
 <h2>{{ CONSTANTS.PLAYER_TITLE}}
 </h2>
-<div class= "row">
-  <label for= "name"> {{ CONSTANTS.PLAYER_NAME_LABEL }} </label><input name="name"/> 
+<div class= "row" [ngclass]= "states">
+  <label for= "name" [style.color}="getColor()"> {{ CONSTANTS.PLAYER_NAME_LABEL }} </label><input name="name"/> 
 </div>
 <div class= "row">
   <label for="aces"> {{ CONSTANTS.ACES_HIGHT_LABEL}} </label><input name= "name" type= "checkbox"/><span
-  class="checkbox"></span>
+  class="checkbox" [class.checked]="acesHigh" (click)="toggleAces()"></span>
   </div>
 <button [disabled]="disableButton"(click)="startGame($event)">{{CONSTANTS.START_LABEL}}</button>
 
