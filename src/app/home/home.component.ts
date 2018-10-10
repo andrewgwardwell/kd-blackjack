@@ -7,9 +7,8 @@ import { Deck } from '../_models/deck';
 })
 export class homeComponent implements OnInit {
  public title = 'js-blackjack';
-  subTitle = '';
-  public hideGame = true;
-  public hideEnd = true;
+  public gameStarted = false;
+  public gameEnded = false;
 
   ngOnInit() { 
     const deck = new Deck(false);
@@ -17,14 +16,17 @@ export class homeComponent implements OnInit {
 
     const players = [];
     players.push(new Player('Dealer'));
-    players.push(new players('Dan'));
+    players.push(new Player('Dan'));
 
     deck.deal(players, 2);
 
     console.log(players[1]);
   }
   startGame() {
-    this.hideStart = true;
-    this.hideGame = false; 
+    this.gameStarted = true;
+    this.gameEnded = false; 
+  }
+  endGame() {
+    this.gameEnded = true;
   }
 }
