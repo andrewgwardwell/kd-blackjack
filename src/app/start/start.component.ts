@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { ConstantsService } from '../_services/constants.service';
-import { setTimeout } from 'timers';
 
 @Component({
   selector: 'app-start',
@@ -32,7 +31,11 @@ startGame(event) {
   event.preventDefault();
   this.start.emit();
 }
+getColor() {
+  let red = 'red';
+  return red;
 
+}
 toggleAces() {
   this.acesHigh = !this.acesHigh; 
 }

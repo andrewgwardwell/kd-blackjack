@@ -31,7 +31,7 @@ const CONSTS = new ConstantsService();
                     faceCount = 0;
                 }
             }
-    const color = (suitIndex === 0 || suitIndex === 3) ? CONSTS.COLORS[1];
+    const color = (suitIndex === 0 || suitIndex === 3) ? CONSTS.COLORS[1]:'blue';
     this.cards.push(new Card(color, suit, name, value));
 
 });     
@@ -40,9 +40,9 @@ const CONSTS = new ConstantsService();
 }
 shuffle() {
     const tmp = this.cards.slice();
-    for (let x = tmp.length; x; x- -) {
-        const y = Math.floor(Math.random()* x );
-        [tmp[x - 1], tmp[y]] = [tmp[y], [tmp[x - 1]],
+    for (let x = tmp.length; x; x--) {
+        const y = Math.floor(Math.random() * x);
+        [tmp[x - 1], tmp[y]] = [tmp[y], tmp[x - 1]];
     }
     this.cards = tmp;
 }

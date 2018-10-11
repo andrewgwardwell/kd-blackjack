@@ -4,8 +4,8 @@
     <p>score:<b></b></p>
   </div>
   <ul>
-    <li *ngFor= "let card of player hand" class="card"{{ card.color}} {{card.suit}} {{card.name || 'value-' +
-    card.value}}"><span>The {{ card.name || card.value }} of {{ card.suit }} </span></li>
+    <li *ngFor= "let card of player hand" class="card {{ card.color}} {{card.suit}} {{card.name || 'value-'+card.value}}">
+    <span>The {{ card.name || card.value }} of {{ card.suit }} </span></li>
     </ul>
 </div>
 <app-controls>

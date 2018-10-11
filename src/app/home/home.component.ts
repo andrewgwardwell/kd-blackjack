@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Deck } from '../_models/deck';
+import { Player } from '../_models/player';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
